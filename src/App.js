@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="Appnpm -header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+import React from 'react'
+import Menu from './Session 16/Exercise 1/main.js'
+import AnswerAndQuestion from './Session 16/Exercise 2/main.js'
+class AppMenu extends React.Component {
+  render() {
+    return (
+    <div>
+      <div>
+        <div class="container">
+          <Menu/>
+        </div>
+      </div>
+      <div>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <div class="box">
+          <AnswerAndQuestion/>
+        </div>
+      </div>      
     </div>
-  );
+    )
+  }
 }
 
-export default App;
+export default AppMenu;
