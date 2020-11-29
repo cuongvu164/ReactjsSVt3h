@@ -94,14 +94,17 @@ window.onload = () => {
       const li = document.createElement('li')
       const a = document.createElement('a')
       const p = document.createElement('p')
+
       i.classList = child.icon
       a.innerHTML = child.title
       a.href = child.link
       child.subTitle? p.innerHTML = child.subTitle : p.innerHTML = ''
+
       li.appendChild(a)
       div.appendChild(i)
       div.appendChild(li)
       div.appendChild(p)
+
       if (child.children) {
         const ul = document.createElement('ul')
         createMenu(ul,child.children)
@@ -111,21 +114,28 @@ window.onload = () => {
     })
   }
   const parent = document.createElement('ul')
+
   createMenu(parent,deepMenu)
   box.appendChild(parent)
+
   const divSearch = document.createElement('div')
   const iconSearch = document.createElement('i')
+
   iconSearch.classList.add('fas')
   iconSearch.classList.add('fa-search')
+
   const inputSearch = document.createElement('input')
   inputSearch.type = 'search'
   inputSearch.value ='search ...'
+
   inputSearch.classList.add('inputSearch')
   divSearch.appendChild(inputSearch)
   divSearch.appendChild(iconSearch)
   box.appendChild(divSearch)
+
   const diva = document.querySelectorAll('a')
   const divp = document.querySelectorAll('p')
+  
   deepMenu.forEach((child,i,arr) => {
     diva[1].innerHTML = arr[1].subTitle
     divp[1].innerHTML = arr[0].subTitle
