@@ -14,8 +14,10 @@ class Menu extends React.Component {
               </span>
             </a>
           </li>
+
           <div class="box-right"></div>
           <div class="box-left"></div>
+
           <li>
             <a href="#a">
               <span><i class="fas fa-flask"></i>Projects</span>
@@ -23,6 +25,7 @@ class Menu extends React.Component {
           </li>
           <div class="box-right"></div>
           <div class="box-left"></div>
+
           <li>
             <a href="#a">
               <span><i class="fas fa-angle-double-right"></i>Breadcrumb</span>
@@ -30,6 +33,7 @@ class Menu extends React.Component {
           </li>
           <div class="box-right"></div>
           <div class="box-left"></div>
+          
           <li>
             <a href="#a">
               <span><i class="fas fa-rocket"></i>Getting started</span>

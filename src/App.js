@@ -11,6 +11,11 @@ class AppMenu extends React.Component {
         </div>
       </div>
       <div>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
         <div class="box">
           <AnswerAndQuestion/>
         </div>
