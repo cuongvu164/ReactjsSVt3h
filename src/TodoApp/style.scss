@@ -1,0 +1,177 @@
+$yellow: #feda33;
+$blue: #33a7ff;
+$green: #33ff4d;
+$pale-yellow: #f1ff32;
+$center-container: 0 auto;
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #eeeef6;
+}
+
+.container {
+    width: 650px;
+    // height: 500px;
+    background-color: #ffffff;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+@mixin style-button {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    align-items: center;
+}
+
+@mixin center {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container__box-input {
+    @include center;
+    position: relative;
+    top: 15px;
+    display: flex;
+    justify-content: space-between;
+    input {
+        font-size: 25px;
+        height: 40px;
+        width: 530px;
+        border: 0;
+        &:focus {
+            background-color: #eeeef6;
+            outline: none;
+            transition: all ease-in-out 0.3s;
+        }
+    }
+    button {
+        @include style-button;
+        color: #5c3ef5;
+        font-size: 30px;
+        &:focus {
+            outline: none;
+        }
+    }
+}
+.container__box-tag {
+    border-top: 2px solid #ebebf4;
+    border-bottom: 2px solid #ebebf4;   
+    width: 100%;
+    .container__box-tag--tags {
+        @include center;
+        display: flex;
+        padding: 5px;
+        align-items: center;
+        box-sizing: border-box;
+
+        .tag-active {
+            border-radius: 20px;
+            background-color: #fff;
+            border: 3px solid #fedc3c;
+            box-sizing: border-box;
+        }
+
+        span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            margin-right: 10px;
+        }
+
+        i {
+            font-size: 13px;
+        }
+    }
+}
+
+.container__box-list {
+    width: 100%;
+    .container__box-list--selection {
+        @include center;
+        .container__box-list--task {    
+            display: grid;
+            grid-template-columns: 11fr 50px;
+            input {
+                position: relative;
+                opacity: 0;
+                top: 33px;
+                left: 17px;
+
+                &:checked + span {
+                    background-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%22-10%20-18%20100%20135%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2250%22%20fill%3D%22none%22%20stroke%3D%22%23bddad5%22%20stroke-width%3D%223%22/%3E%3Cpath%20fill%3D%22%235dc2af%22%20d%3D%22M72%2025L42%2071%2027%2056l-4%204%2020%2020%2034-52z%22/%3E%3C/svg%3E');
+                }
+            }
+            span {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                background-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%22-10%20-18%20100%20135%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2250%22%20fill%3D%22none%22%20stroke%3D%22%23ededed%22%20stroke-width%3D%223%22/%3E%3C/svg%3E');
+                background-repeat: no-repeat;
+                background-position: center left;
+                word-break: break-all;
+                padding: 15px 15px 15px 60px;
+                display: block;
+                line-height: 1.2;
+                transition: color 0.4s;
+            }
+        
+            button {
+                grid-column-start: 3;
+                grid-column-end: 4;
+                background-color: transparent;
+                outline: none;
+                border: none;
+                cursor: pointer;
+
+                i {
+                    font-size: 25px;
+                    color: #dfdfed;
+                }
+            }
+        }
+        
+        .completed {
+            span {
+                color: #cccccc;
+                text-decoration: line-through;
+                text-decoration-color: #5b3df5;
+            }
+        }
+    }
+}
+
+.container__box-tab {
+    @include center;
+    margin: 10px auto;
+    button {
+        cursor: pointer;
+        font-weight: bold;
+        color: #6f6f77;
+        background-color: #fff;
+        border: 1px solid #f0f0f7;
+        border-radius: 50px;
+        padding: 10px;
+        margin-right: 13px;
+
+        &:active {
+            background-color: #eeeef6;
+            -webkit-box-shadow: inset 0px 0px 24px -16px rgba(0,0,0,0.48);
+            -moz-box-shadow: inset 0px 0px 24px -16px rgba(0,0,0,0.48);
+            box-shadow: inset 0px 0px 24px -16px rgba(0,0,0,0.48);
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .count-completed {
+        color: #9d9da8;
+        float: right;
+    }
+}
